@@ -1,0 +1,244 @@
+﻿*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Mansalva', cursive;
+    line-height: 2;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+section {
+    padding: 5em 0;
+}
+
+.container{
+    width: 85%;
+    max-width: 65em;
+    margin: 0 auto;
+}
+
+.split {/*WTF does this do again*/
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.split > * {/*WTF does this do again*/
+    flex-basis: 30%;
+    min-width: 15em;
+}
+
+.spacing>*+* {/*stak or flow, EGG!!!s*/
+    margin-top: var(--spacer, 2rem)
+}
+
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--clr-text, black);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    padding: .5em 1.25em;
+    background: var(--clr-accent, blue);
+    border-radius: .25em;
+    transition: 
+        transform 250ms ease-in-out,
+        opacity 250ms linear;
+}
+
+.btn:hover,
+.btn:focus {
+    transform: scale(1.1);
+    opacity: .9;
+}
+
+.primary-title {
+    font-size: 5rem;
+    font-size: clamp(4rem, 5vw + 2rem, 5.5rem);/*caps out in size*/
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.primary-text {
+    font-size: 1.4rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: clamp(2.5rem, calc(5vw + 1rem), 4rem);
+    line-height: 1;
+    color: #2b2b5f;;
+    margin-bottom: 3rem;
+}
+
+.hero {
+    color: #D7D9CE;
+    text-align: center;
+    padding: 15em 0;
+    background: #13505B;
+    --clr-accent: #119DA4;
+    text-shadow: .1em .1em #040404;
+}
+
+.container > .btn {
+    text-shadow: none;
+}
+
+
+@supports (background-blend-mode: multiply) {/*EGG!!!*/
+    .hero {
+        background: url(img/bt.jpg),
+            radial-gradient(#13505B, #040404);
+        background-size: 220%;
+        background-blend-mode: multiply;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
+
+.featured {
+    color:#13505B;
+    text-shadow: .1em .1em #040404;
+    background: #D7D9CE;
+}
+
+.featured_item {
+    display: block;
+    position: relative;
+    transform: scale(.85);
+    transition: transform 250ms ease-in-out;
+    text-decoration: none;
+    color: #040404;
+    text-shadow: none;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.featured_details {
+    opacity: 0;
+    transition: opacity 250ms linear;
+    font-size: clamp(1.5rem, calc(2vw + 0.5rem), 3rem);;
+}
+
+.featured_item:hover,
+.featured_item:focus {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+}
+
+.featured_item:hover .featured_details,
+.featured_item:focus .featured_details {
+    opacity: 1;
+}
+
+.featured_item::after {/*adds circles behind*/
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    padding: 100% 100% 0 0; 
+    border-radius: 50%;
+    background: #119DA4;
+    z-index: -1;
+}
+
+.price {
+    display: block;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.our-products{
+    background-color: #119DA4;
+    color: #040404;
+    text-shadow: .1em .1em #13505B;
+}
+
+.product {
+    font-size: 2rem;
+    background: radial-gradient(
+        var(--clr-inner, limegreen), 
+        var(--clr-outer, blue)
+    );
+    padding: 3em;
+    border-radius: 3em;
+    margin-bottom: 3em;
+    text-align: center;
+}
+
+.product_image {
+    margin: -4em 0 auto auto;
+}
+
+.product_title {
+    font-size: 3rem;
+    line-height: 1.1;
+    color: #fff;
+    text-shadow: 0 0 .2em #000;
+}
+
+.t-lime {
+    --clr-inner:#e9e297;
+    --clr-outer: #8d8d74;
+    --clr-accent: #54523c;
+}
+
+.t-gold {
+    --clr-outer: #917749;
+    --clr-inner:  #e0caa9;
+    --clr-accent: #eb181d;
+}
+
+.t-black {
+    --clr-accent:#f1640e;
+    --clr-inner: #6ab7e1;
+    --clr-outer: #3e6073;
+}
+
+@media only screen and (min-width: 45em) {
+    .product {
+        height: 27rem;
+        font-size: 1.4rem;
+    }
+
+    .product_title {
+        margin: 0;
+    }
+
+    .product_image {
+        float: right;
+        width: 50%;
+        shape-outside: url(img/t4.png);
+        shape-margin: 1em;
+        text-align: left;
+    }
+
+    .t-gold > .product_image{
+        float: left;
+        shape-outside: url(img/t5.png);
+        shape-margin: 1em;
+    }
+
+    .t-black > .product_image {
+        shape-outside: url(img/t6.png);
+        shape-margin: 1em;
+    }
+}

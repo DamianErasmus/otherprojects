@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website Landing Page Design</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+<body>
+    
+    <section class="hero">
+        <input type="checkbox" id="check">
+        <header>
+            <h2> <a href="#" class="logo">Logo</a></h2>
+            <div class="navigation">
+                <a href="#">Home</a>
+                <a href="#feats">Featured items</a>
+                <a href="#testims">Testimonials</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <label for="check">
+                <i class="fas fa-bars menu-btn"></i>
+                <i class="fas fa-times close-btn"></i>
+            </label>
+        </header>
+        
+        <div class="content">
+            <div class="git">
+                <h2>Value Proposition <br><span>Short & Bold!</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi expedita totam amet et rerum vitae facilis quas perspiciatis numquam. Illo, reiciendis maiores dolore eveniet explicabo cum officia sunt provident vero!</p>
+                <a href="#" class="git-btn">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Items -->
+
+    <section class="featured" id="feats">
+        <h2>Featured Items</h2>
+        <div class="featured_items">
+            <div class="featured_item">
+                <h3 class="item_name">Item Name</h3>
+                <img src="/dist/images/camera-1085705_640.png" alt="default">
+                <p class="item_details">Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="featured_item">
+                <h3 class="item_name">Item Name</h3>
+                <img src="/dist/images/camera-1085705_640.png" alt="default">
+                <p class="item_details">Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="featured_item">
+                <h3 class="item_name">Item Name</h3>
+                <img src="/dist/images/camera-1085705_640.png" alt="default">
+                <p class="item_details">Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="section-footer">
+        <div class="container">
+            <div class="contact_details" id="contact">
+                <h3>Contact Details</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum soluta eos iusto.</p>
+            </div>
+            <div class="social_media">
+                <h3>Social Media</h3>
+                <div class="media-icons">
+                    <a href="http://facebook.com"><i class="fab fa-facebook-f"></i></a>
+                    <a href="http://twitter.com"><i class="fab fa-twitter"></i></a>
+                    <a href="http://instagram.com"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3>Get In Touch</h3>
+                <form name="email-form" method="POST" data-netlify="true">
+                    <div class="email-form">
+                        <span class="form-control-wrap">
+                            <input type="email" name="email" id="email" size="40" class="form-control" placeholder="Email"/>
+                        </span>
+                        <button type="submit" class="form-control submit">
+                        <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

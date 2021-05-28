@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+
+:root {
+    --color-1: red;
+    --color-2: green;
+    --color-3: gold;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow Condensed', sans-serif;
+    overflow-x: hidden;
+}
+
+.section1, 
+.section2, 
+.section3,
+.section4 {
+    padding: 25vh 25vw;
+    max-height: 100vh;
+    font-size: 2rem;
+}
+
+
+.section1 {
+    background-color: var(--color-1);
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
+}
+
+.section2 {
+    background-color: var(--color-2);
+}
+
+.section3 {
+    background-color: var(--color-3);
+}
+
+.section4 {
+    background-color: purple;
+}
+
+.inverse {
+    color: white;
+    background: #333;
+}
+
+.from-left {
+    transform: translateX(-50%);
+}
+
+.from-right {
+    transform: translateX(50%);
+}
+
+.from-left,
+.from-right {
+    transition: transform 400ms ease-in;
+}
+
+.from-left.appear,
+.from-right.appear {
+    transform: translateX(0);
+}
